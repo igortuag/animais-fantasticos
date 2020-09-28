@@ -1,29 +1,27 @@
-const animais = document.getElementById('animais')
-console.log(animais)
+const menu = document.querySelector(".menu");
 
-const gridSection = document.getElementsByClassName('grid-section')
-console.log(gridSection[1])
+menu.classList.add("ativo");
+menu.classList.toggle("ativo");
+menu.classList.toggle("azul");
 
-const primeiraUl = document.querySelector('ul');
-console.log(primeiraUl)
+/// adicionar antigamente
+menu.className += " Antigo";
 
-const linksInternos = document.querySelector('[href^="#"]')
-console.log(linksInternos)
+if (menu.classList.contains("azul")) {
+  menu.classList.add("possui-azul");
+}
 
-const animaisImg = document.querySelectorAll('.animais img')
-console.log(animaisImg[1])
+// console.log(menu.classList)
 
-const gridSectionHTML = document.getElementsByClassName('grid-section')
-const gridSectionNode = document.querySelectorAll('.grid-section')
+const animais = document.querySelector(".animais");
+console.log(animais.attributes.id);
 
-primeiraUl.classList.add('grid-section')
+const img = document.querySelector("img");
+const srcImg = img.getAttribute("src");
 
-console.log(gridSectionHTML)
-console.log(gridSectionNode)
+img.setAttribute("alt", "É uma raposa");
+const srcAlt = img.getAttribute("alt");
 
-gridSectionNode.forEach((item, index) => {
-  console.log(item, index )
-})
+const possuiAlt = img.hasAttribute("alt");
 
-const arrayGrid = Array.from(gridSectionHTML)
-arrayGrid.map((item) => console.log(item))
+console.log(possuiAlt);
