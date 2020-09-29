@@ -1,33 +1,60 @@
-const listaAnimais = document.querySelector(".animais-lista");
+const img = document.querySelector("img");
 
-const height = listaAnimais.scrollHeight;
-const animaisTop = listaAnimais.offsetTop;
-console.log(animaisTop);
+const callback = (event) => {
+  console.log(event);
+};
 
-const primeiroh2 = document.querySelector("h2");
-const h2left = primeiroh2.offsetLeft;
-console.log(h2left);
+//img.addEventListener("click", callback);
 
-const h2rect = primeiroh2.getBoundingClientRect();
-console.log(h2rect);
+const callbackList = (event) => {
+  console.log(event.currentTarget);
+  console.log(event.target);
+  console.log(event.type);
+};
 
-if(h2rect.top < 0) {
-  console.log('Passou do elemento')
+const animaisList = document.querySelector(".animais-lista");
+
+//animaisList.addEventListener("click", callbackList);
+
+//console.log(animaisList);
+
+const linkExterno = document.querySelector('a[href^="http"]');
+
+const handleLinkExterno = (event) => {
+  //console.log('Clicou')
+  console.log(this);
+  console.log(event.currentTarget);
+  event.preventDefault();
+};
+
+linkExterno.addEventListener("click", handleLinkExterno);
+
+const h1 = document.querySelector("h1");
+
+const handleEvent = (event) => {
+  console.log(event.type, event);
+};
+
+// h1.addEventListener("click", handleEvent);
+// h1.addEventListener("mouseenter", handleEvent);
+// h1.addEventListener("mousemove", handleEvent);
+
+// window.addEventListener("scroll", handleEvent);
+// window.addEventListener("resize", handleEvent);
+
+const handleKeyBoard = (event) => {
+  if(event.key === 'f') {
+    document.body.classList.toggle('fullscreen')
+  }
+}
+window.addEventListener("keydown", handleKeyBoard);
+
+const imgs = document.querySelectorAll('img');
+
+const handleImg = (event) => {
+  console.log(event.currentTarget.getAttribute('src'))
 }
 
-console.log(
-  window.innerWidth,
-  window.outerWidth,
-  window.innerHeight,
-  window.outerHeight,
-  window.pageYOffset,
-);
-
-const small = window.matchMedia('(max-width: 600px)').matches
-
-if(small) {
-  console.log('Usuário mobile')
-} else {
-  console.log('Usuário desktop')
-}
-
+imgs.forEach((img) => {
+  img.addEventListener('click', handleImg)
+})

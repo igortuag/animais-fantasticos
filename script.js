@@ -1,31 +1,33 @@
-// Verifique a distância da primeira imagem em relação ao topo da página
-const primeiraImg = document.querySelector("img");
-console.log(primeiraImg.offsetTop);
+// Quando o usuário clicar nos links internos do site, adicione a classe ativo ao item clicado e remova dos demais itens caso eles possuam a mesma.
+// Previna o comportamento padrão desses links
+const internalLinks = document.querySelectorAll("a[href^='#']");
 
-// Retorne a soma da largura de todas as imagens
-let somaLarguras = 0;
-
-window.onload = () => {
-  const todasImgs = document.querySelectorAll("img");
-  todasImgs.forEach((img) => (somaLarguras += console.log(img.offsetWidth)));
+const addActive = (event) => {
+  event.preventDefault();
+  internalLinks.forEach((link) => link.classList.remove("ativo"));
+  event.currentTarget.classList.add("ativo");
 };
-console.log(somaLarguras);
 
-// Verifique se os links da página possuem o mínimo recomendado para telas utilizadas com o dedo. (48px/48px de acordo com o google)
-const LinksPage = document.querySelectorAll("a");
-LinksPage.forEach((link) => {
-  let linkProps = link.getBoundingClientRect()
-  console.log(linkProps.width);
-  console.log(linkProps.height);
-  if (linkProps.width < 48 || linkProps.height < 48) {
-    console.log("Não possui boa acessibilidade")
-  } else {
-    console.log("Possui boa acessibilidade")
+internalLinks.forEach((el) => el.addEventListener("click", addActive));
+
+
+// Selecione todos os elementos do site começando a partir do body, ao clique mostre exatamente quais elementos estão sendo clicados
+// const showInfos = (event) => (console.log(event.target))
+// const allElements = document.querySelectorAll('*')
+// allElements.forEach((el) => el.addEventListener('click', showInfos))
+
+// Utilizando o código anterior, ao invés de mostrar no console, remova o elemento que está sendo clicado, o método remove() remove um elemento
+//const removeInfos = (event) => (event.target.remove())
+//const allElements = document.querySelectorAll('*')
+//allElements.forEach((el) => el.addEventListener('click', removeInfos))
+
+// Se o usuário clicar na tecla (t), aumente todo o texto do site.
+
+const handleClickT = (event) => {
+  if (event.key === "t") {
+    console.log("Tecla t")
+    document.documentElement.classList.toggle("textomaior");
   }
-});
+};
 
-// Se o browser for menor que 720px, adicione a classe menu-mobile ao menu
-if(window.matchMedia('(max-width: 720px)')) {
-  menu = document.querySelector('.menu')
-  menu.classList.add('menu-mobile')
-}
+window.addEventListener("keydown", handleClickT);
