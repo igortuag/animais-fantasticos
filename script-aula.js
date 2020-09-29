@@ -1,27 +1,33 @@
-const menu = document.querySelector(".menu");
+const listaAnimais = document.querySelector(".animais-lista");
 
-menu.classList.add("ativo");
-menu.classList.toggle("ativo");
-menu.classList.toggle("azul");
+const height = listaAnimais.scrollHeight;
+const animaisTop = listaAnimais.offsetTop;
+console.log(animaisTop);
 
-/// adicionar antigamente
-menu.className += " Antigo";
+const primeiroh2 = document.querySelector("h2");
+const h2left = primeiroh2.offsetLeft;
+console.log(h2left);
 
-if (menu.classList.contains("azul")) {
-  menu.classList.add("possui-azul");
+const h2rect = primeiroh2.getBoundingClientRect();
+console.log(h2rect);
+
+if(h2rect.top < 0) {
+  console.log('Passou do elemento')
 }
 
-// console.log(menu.classList)
+console.log(
+  window.innerWidth,
+  window.outerWidth,
+  window.innerHeight,
+  window.outerHeight,
+  window.pageYOffset,
+);
 
-const animais = document.querySelector(".animais");
-console.log(animais.attributes.id);
+const small = window.matchMedia('(max-width: 600px)').matches
 
-const img = document.querySelector("img");
-const srcImg = img.getAttribute("src");
+if(small) {
+  console.log('Usuário mobile')
+} else {
+  console.log('Usuário desktop')
+}
 
-img.setAttribute("alt", "É uma raposa");
-const srcAlt = img.getAttribute("alt");
-
-const possuiAlt = img.hasAttribute("alt");
-
-console.log(possuiAlt);
