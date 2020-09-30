@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animais Fantásticos</title>
+    <script>
+      document.documentElement.className += " js";
+    </script>
     <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="menu">
@@ -19,7 +28,7 @@
     </nav>
     <section class="grid-section animais" id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
-      <ul class="animais-lista">
+      <ul class="animais-lista js-tabmenu">
         <li>
           <img src="img/imagem1.jpg" alt="Raposa" />
         </li>
@@ -40,7 +49,7 @@
         </li>
       </ul>
 
-      <div class="animais-descricao">
+      <div class="animais-descricao js-tabcontent">
         <section>
           <h2>Raposa</h2>
           <p>
@@ -70,130 +79,176 @@
         <section>
           <h2>Esquilo</h2>
           <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda.
+            AOs esquilos pertencem a uma grande família de mamíferos roedores,
+            de pequeno e médio porte, conhecida como Sciuridae.
           </p>
           <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
+            No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe,
+            quatimirim, quatipuru, agutipuru ou acutipuru
           </p>
           <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum. As raposas sul-americanas, embora
-            sejam canídeos, não pertencem ao gênero Vulpes.
+            Na Galiza e em algumas zonas de Portugal, também é conhecido por
+            esquio.
           </p>
           <p>
-            Por essa razão, biologicamente, são consideradas "falsas raposas".
-            Seu gênero é denominado Pseudalopex (pseud = falso // alopex =
-            raposa). O nome popular foi atribuído às raposas por sua semelhança
-            tanto física quanto comportamental com as raposas do hemisfério
-            Norte. Existe mais de 30 espécies diferentes de raposa.
+            Os esquilos estão espalhados por quase todo o mundo, a maioria nas
+            zonas de climas temperado ou tropical, mas também em algumas zonas
+            de clima frio.
+          </p>
+          <p>
+            Como todos os roedores, possui presas fortíssimas, com que roem
+            facilmente sementes, principalmente bolotas.
           </p>
         </section>
 
         <section>
           <h2>Urso</h2>
           <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda.
+            Os Ursos (latim científico: Ursidae) constituem uma família de
+            mamíferos plantígrados, da ordem Carnivora, geralmente de grande
+            porte, contendo os ursos e os pandas.
           </p>
           <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
+            Embora classificado como urso, e logo após, como procionídeo, junto
+            com o panda-vermelho, o panda-gigante foi recolocado dentro da
+            família dos ursídeos devido às novas pesquisas genéticas.
           </p>
           <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum. As raposas sul-americanas, embora
-            sejam canídeos, não pertencem ao gênero Vulpes.
+            Algumas características comuns dos ursos são pelagem espessa, rabo
+            curto, o olfato desenvolvido e as garras não retráteis.
           </p>
           <p>
-            Por essa razão, biologicamente, são consideradas "falsas raposas".
-            Seu gênero é denominado Pseudalopex (pseud = falso // alopex =
-            raposa). O nome popular foi atribuído às raposas por sua semelhança
-            tanto física quanto comportamental com as raposas do hemisfério
-            Norte. Existe mais de 30 espécies diferentes de raposa.
+            Os ursídeos são geralmente animais omnívoros, mas se alimentam
+            principalmente de carne.
           </p>
         </section>
 
         <section>
           <h2>Lobo</h2>
           <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda.
+            O lobo (também chamado de lobo-cinzento; nome científico: Canis
+            lupus) é uma espécie de mamífero canídeo do gênero Canis.
           </p>
           <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
+            É um sobrevivente da Era do Gelo, originário do Pleistoceno
+            Superior, cerca de 300 mil anos atrás. É o maior membro remanescente
+            selvagem da família canidae.
           </p>
           <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum. As raposas sul-americanas, embora
-            sejam canídeos, não pertencem ao gênero Vulpes.
+            O sequenciamento de DNA e estudos genéticos reafirmam que o
+            lobo-cinzento é ancestral do cão doméstico (Canis lupus familiaris),
+            contudo alguns aspectos desta afirmação têm sido questionados
+            recentemente.
           </p>
           <p>
-            Por essa razão, biologicamente, são consideradas "falsas raposas".
-            Seu gênero é denominado Pseudalopex (pseud = falso // alopex =
-            raposa). O nome popular foi atribuído às raposas por sua semelhança
-            tanto física quanto comportamental com as raposas do hemisfério
-            Norte. Existe mais de 30 espécies diferentes de raposa.
+            Uma série de outras subespécies do lobo-cinzento foram
+            identificadas, embora o número real de subespécies ainda esteja em
+            discussão.
+          </p>
+          <p>
+            Os lobos-cinzentos são tipicamente predadores ápice nos ecossistemas
+            que ocupam. Embora não sejam tão adaptáveis à presença humana como
+            geralmente ocorre com as demais espécies de canídeos, os lobos se
+            desenvolveram em diversos ambientes, como florestas temperadas,
+            desertos, montanhas, tundras, taigas, campos e até mesmo em algumas
+            áreas urbanas.
+          </p>
+          <p>
+            O lobo-cinzento (Canis lupus), o lobo-vermelho (Canis rufus), o
+            lobo-etíope (Canis simensis) e o lobo-dourado (Canis anthus) são as
+            únicas quatro espécies classificadas como lobos. Os demais lobos
+            correspondem a subespécies derivadas dessas quatro espécies.
           </p>
         </section>
 
         <section>
           <h2>Macaco</h2>
           <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda.
+            Macaco é um termo de origem africana (provavelmente do banto makako)
+            utilizado como designação comum a todas as espécies de símios ou
+            primatas antropoides.
           </p>
           <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
+            É aplicada restritivamente no Brasil aos cebídeos (ou macacos do
+            Novo Mundo) em geral.
           </p>
           <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum. As raposas sul-americanas, embora
-            sejam canídeos, não pertencem ao gênero Vulpes.
+            No sentido estrito, "macaco" refere-se às espécies de primatas
+            pertencentes ao género Macaca.
           </p>
           <p>
-            Por essa razão, biologicamente, são consideradas "falsas raposas".
-            Seu gênero é denominado Pseudalopex (pseud = falso // alopex =
-            raposa). O nome popular foi atribuído às raposas por sua semelhança
-            tanto física quanto comportamental com as raposas do hemisfério
-            Norte. Existe mais de 30 espécies diferentes de raposa.
+            A designação mico se origina, segundo o Dicionário Aurélio, do
+            caraíba (karib) continental.
+          </p>
+          <p>
+            É bastante usada no Brasil, onde costuma aplicar-se às espécies do
+            gênero Cebus, no Sul, e às espécies de pequeno porte, ou saguis, no
+            Norte.
+          </p>
+          <p>
+            O termo sagui se origina do tupi antigo sagûi e também designa os
+            macacos calitriquídeos de pequeno porte.
+          </p>
+          <p>
+            Ainda segundo Cunha, o termo símio, que também designa os macacos
+            (tendo sido registrado no português dos séculos XVI e XVII), vem do
+            latim simius, de simus, "que tem o nariz chato".
           </p>
         </section>
 
         <section>
           <h2>Leão</h2>
           <p>
-            As raposas são animais mamíferos e onívoros pertencentes à família
-            Canidae. São vulpídeos de porte médio, caracterizados por um focinho
-            comprido e uma cauda longa e peluda.
+            O leão [feminino: leoa] (nome científico: Panthera leo) é uma
+            espécie de mamífero carnívoro do gênero Panthera e da família
+            Felidae.
           </p>
           <p>
-            Também apresentam como particularidade suas pupilas ovais,
-            semelhantes às pupilas verticais dos felídeos.
+            A espécie é atualmente encontrada na África subsaariana e na Ásia,
+            com uma única população remanescente em perigo, no Parque Nacional
+            da Floresta de Gir, Gujarat, Índia.
           </p>
           <p>
-            De cerca de 40 espécies reconhecidas como raposas, somente 12
-            pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a
-            raposa vermelha é a mais comum. As raposas sul-americanas, embora
-            sejam canídeos, não pertencem ao gênero Vulpes.
+            Foi extinto na África do Norte e no Sudoeste Asiático em tempos
+            históricos, e até o Pleistoceno Superior, há cerca de 10 000 anos,
+            era o mais difundido grande mamífero terrestre depois dos humanos,
+            sendo encontrado na maior parte da África, em muito da Eurásia, da
+            Europa Ocidental à Índia, e na América, do Yukon ao México.
           </p>
           <p>
-            Por essa razão, biologicamente, são consideradas "falsas raposas".
-            Seu gênero é denominado Pseudalopex (pseud = falso // alopex =
-            raposa). O nome popular foi atribuído às raposas por sua semelhança
-            tanto física quanto comportamental com as raposas do hemisfério
-            Norte. Existe mais de 30 espécies diferentes de raposa.
+            É uma dos quatro grandes felinos, com alguns machos excedendo 250
+            quilogramas em peso, sendo o segundo maior felino recente depois do
+            tigre.
+          </p>
+          <p>
+            A pelagem é unicolor de coloração castanha, e os machos apresentam
+            uma juba característica.
+          </p>
+          <p>
+            Uma das características mais marcantes da espécie é a presença de um
+            tufo de pelos pretos na cauda, que também possui uma espora.
+          </p>
+          <p>
+            Habita preferencialmente as savanas e pastagens abertas, mas pode
+            ser encontrado em regiões mais arbustivas.
+          </p>
+          <p>
+            É um animal sociável que vive em grupos que consiste das leoas e
+            suas crias, o macho dominante e alguns machos jovens que ainda não
+            alcançaram a maturidade sexual.
+          </p>
+          <p>
+            A dieta consiste principalmente de grandes ungulados e possuem
+            hábitos noturnos e crepusculares, descansando e dormindo na maior
+            parte do dia.
+          </p>
+          <p>
+            Leões vivem por volta de 10-14 anos na natureza, enquanto em
+            cativeiro eles podem viver por até 30 anos.
+          </p>
+          <p>
+            Alguns animais desenvolveram o hábito de atacar e devorar humanos,
+            ficando conhecidos como "devoradores de homens".
           </p>
         </section>
       </div>
