@@ -1,60 +1,37 @@
-const img = document.querySelector("img");
+// const h1 = document.querySelector("h1");
+// const animaisLista = document.querySelector(".animais-descricao");
+// //console.log(h1.innerHTML)
+// //console.log(h1.outerHTML)
 
-const callback = (event) => {
-  console.log(event);
-};
+// //h1.innerHTML = '<p>Novo Título</p>'
 
-//img.addEventListener("click", callback);
+// //console.log(h1.innerText)
 
-const callbackList = (event) => {
-  console.log(event.currentTarget);
-  console.log(event.target);
-  console.log(event.type);
-};
+// const lista = document.querySelector(".animais-lista");
 
-const animaisList = document.querySelector(".animais-lista");
+// console.log(lista.children[--lista.children.length]);
+// console.log(lista.childNodes);
 
-//animaisList.addEventListener("click", callbackList);
+// const animais = document.querySelector(".animais");
+// const contato = document.querySelector(".contato");
+// const titulo = contato.querySelector(".titulo");
 
-//console.log(animaisList);
+// const mapa = document.querySelector(".mapa");
 
-const linkExterno = document.querySelector('a[href^="http"]');
+// contato.replaceChild(lista, titulo);
 
-const handleLinkExterno = (event) => {
-  //console.log('Clicou')
-  console.log(this);
-  console.log(event.currentTarget);
-  event.preventDefault();
-};
+// //contato.insertBefore(animais, mapa);
 
-linkExterno.addEventListener("click", handleLinkExterno);
+// const novoh1 = document.createElement('h1')
+// novoh1.innerHTML = 'Novo Titulo';
+// novoh1.classList.add('titulo')
+
+// mapa.appendChild(novoh1)
 
 const h1 = document.querySelector("h1");
+const faq = document.querySelector(".faq");
 
-const handleEvent = (event) => {
-  console.log(event.type, event);
-};
+const cloneH1 = h1.cloneNode(true);
 
-// h1.addEventListener("click", handleEvent);
-// h1.addEventListener("mouseenter", handleEvent);
-// h1.addEventListener("mousemove", handleEvent);
-
-// window.addEventListener("scroll", handleEvent);
-// window.addEventListener("resize", handleEvent);
-
-const handleKeyBoard = (event) => {
-  if(event.key === 'f') {
-    document.body.classList.toggle('fullscreen')
-  }
-}
-window.addEventListener("keydown", handleKeyBoard);
-
-const imgs = document.querySelectorAll('img');
-
-const handleImg = (event) => {
-  console.log(event.currentTarget.getAttribute('src'))
-}
-
-imgs.forEach((img) => {
-  img.addEventListener('click', handleImg)
-})
+cloneH1.classList.add("azul");
+faq.appendChild(cloneH1);

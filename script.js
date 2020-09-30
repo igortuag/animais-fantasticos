@@ -1,33 +1,19 @@
-// Quando o usuário clicar nos links internos do site, adicione a classe ativo ao item clicado e remova dos demais itens caso eles possuam a mesma.
-// Previna o comportamento padrão desses links
-const internalLinks = document.querySelectorAll("a[href^='#']");
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector('.menu')
+const cloneMenu = menu.cloneNode(true)
 
-const addActive = (event) => {
-  event.preventDefault();
-  internalLinks.forEach((link) => link.classList.remove("ativo"));
-  event.currentTarget.classList.add("ativo");
-};
+copy = document.querySelector('.copy')
+copy.appendChild(cloneMenu)
 
-internalLinks.forEach((el) => el.addEventListener("click", addActive));
+// Selecione o primeiro DT da dl de Faq
+const faq = document.querySelector('.faq-lista')
+console.log(faq.querySelector('dt'))
 
+// Selecione o DD referente ao primeiro DT
+console.log(faq.querySelector('dt').nextElementSibling)
 
-// Selecione todos os elementos do site começando a partir do body, ao clique mostre exatamente quais elementos estão sendo clicados
-// const showInfos = (event) => (console.log(event.target))
-// const allElements = document.querySelectorAll('*')
-// allElements.forEach((el) => el.addEventListener('click', showInfos))
+// Substitua o conteudo html de .faq pelo de .animais
+const animais = document.querySelector('.animais')
+const faqContent = document.querySelector('.faq')
 
-// Utilizando o código anterior, ao invés de mostrar no console, remova o elemento que está sendo clicado, o método remove() remove um elemento
-//const removeInfos = (event) => (event.target.remove())
-//const allElements = document.querySelectorAll('*')
-//allElements.forEach((el) => el.addEventListener('click', removeInfos))
-
-// Se o usuário clicar na tecla (t), aumente todo o texto do site.
-
-const handleClickT = (event) => {
-  if (event.key === "t") {
-    console.log("Tecla t")
-    document.documentElement.classList.toggle("textomaior");
-  }
-};
-
-window.addEventListener("keydown", handleClickT);
+faqContent.innerHTML = animais.innerHTML
