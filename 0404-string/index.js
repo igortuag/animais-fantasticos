@@ -40,11 +40,37 @@ const preco = "R$ 99,00";
 
 const listaPrecos = ["R$ 99", "R$ 199", "R$ 12000"];
 
-listaPrecos.forEach((el) => {
-  console.log(el.padStart(10, "-"));
-});
+// listaPrecos.forEach((el) => {
+//   console.log(el.padStart(10, "-"));
+// });
 
-const listaPedidos = ['1', '2', '3', '4', '5', '6', '22', '354', '485'];
-listaPedidos.forEach((el) => {
-  console.log(el.padStart(6, '0'))
-})
+// const listaPedidos = ['1', '2', '3', '4', '5', '6', '22', '354', '485'];
+// listaPedidos.forEach((el) => {
+//   console.log(el.padStart(6, '0'))
+// })
+
+frase2 = "TA";
+
+//console.log(frase2.repeat(5))
+
+let listaItens = "Camisa Bonés Calças Bermudas Vestidos Saias";
+
+listaItens = listaItens.replace(/[ ]+/g, ", ");
+
+const arrayLista = listaItens.split(", ");
+
+// console.log(arrayLista)
+
+const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
+const htmlArray = htmlText.split("div");
+const novoHtml = htmlArray.join('section')
+// console.log(htmlText);
+// console.log(htmlArray);
+console.log(novoHtml);
+
+const frutasArray = ['Banana', 'Melancia', 'Laranja']
+
+const valor = ' R$ 23.00  '
+console.log(valor.trim())
+console.log(valor.trimStart())
+console.log(valor.trimEnd())
