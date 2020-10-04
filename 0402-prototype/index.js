@@ -1,51 +1,43 @@
-function Pessoa(nome, idade) {
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
+function Pessoa(nome, sobrenome, idade) {
   this.nome = nome;
+  this.sobrenome = sobrenome;
   this.idade = idade;
-  this.abracar = function () {
-    return "Abraçou";
-  };
-  this.andar = function () {
-    return "Andou pelo objeto";
-  };
 }
 
-var obj = {
-  nome: "Fulano",
-  idade: 28,
+Pessoa.prototype.nomeCompleto = function () {
+  return this.nome + " " + this.sobrenome;
 };
 
-obj.teste = "Isso";
+const igor = new Pessoa("Igor", "Tuag", 25);
 
-Pessoa.prototype.andar = function () {
-  return this.nome + " andou";
-};
+// Liste os métodos acessados por
+// dados criados com NodeList,
+// HTMLCollection, Document
+console.log(NodeList.prototype)
+console.log(HTMLAllCollection.prototype)
+console.log(Document.prototype)
 
-Pessoa.prototype.nadar = function () {
-  return this.nome + " nadou";
-};
+// Liste os construtores dos dados abaixo
+const li = document.querySelector("li");
+li;
+li.click;
+li.innerText;
+li.value;
+li.hidden;
+li.offsetLeft;
+li.click();
 
-const igor = new Pessoa("Igor", 25);
-
-//console.log(Pessoa.prototype);
-//console.log(igor.prototype);
-
-//console.log(igor.andar);
-
-const pais = "Brasil";
-const cidade = new String("Ariquemes");
-
-const listaAnimais = ["Cachorro", "Gato", "Cavalo"];
-
-const listaDom = document.querySelectorAll('li')
-const listaArray = Array.from(listaDom)
-
-
-const Carro = {
-  marca: "Ford",
-  preco: 2000,
-  andar() {
-    return true
-  }
-}
-
-console.log(Carro)
+console.log(li.constructor.name) // Document
+console.log(li.click.constructor.name) // HRMLLIElement
+console.log(li.innerText.constructor.name) // Function
+console.log(li.value.constructor.name) // String
+console.log(li.hidden.constructor.name) // Number
+console.log(li.offsetLeft.constructor.name) // Boolean
+console.log(li.click.constructor.name) // Undefined
+// Qual o construtor do dado abaixo:*
+li.hidden.constructor.name;
+console.log(li.hidden.constructor.name) // String
