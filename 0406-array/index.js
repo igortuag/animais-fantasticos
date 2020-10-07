@@ -1,44 +1,78 @@
-const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
-// Remova o primeiro valor de comidas e coloque em uma variável
-const primeiraComidaRemovida = comidas.shift()
-console.log(primeiraComidaRemovida)
-// Remova o último valor de comidas e coloque em uma variável
-const ultimaComidaRemovida = comidas.pop()
-console.log(ultimaComidaRemovida)
-// Adicione 'Arroz' ao final da array
-comidas.push('Arroz')
-console.log(comidas)
-// Adicione 'Peixe' e 'Batata' ao início da array
-//comidas.unshift('Peixe', 'Batata')
-comidas.splice(0, 0, 'Peixe', 'Batata')
-console.log("Adicione elementos no começo: ", comidas)
+// const pessoa = new Object({
+//   nome: "Andre",
+// });
 
-const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
-// Arrume os estudantes em ordem alfabética
-estudantes.sort()
-console.log(estudantes)
-// Inverta a ordem dos estudantes
-console.log(estudantes.reverse())
-// Verifique se Joana faz parte dos estudantes
-console.log(estudantes.includes('Joana'))
-// Verifique se Juliana faz parte dos estudantes
-console.log(estudantes.includes('Juliana'))
+// console.log(pessoa);
 
-let html = `<section> 
-							<div>Sobre</div> 
-							<div>Produtos</div> 
-							<div>Contato</div> 
-						</section>`
-// Substitua section por ul e div com li,
-// utilizando split e join
-html = html.split('section').join('ul')
-html = html.split('div').join('li')
-console.log(html)
+// const carro = {
+//   rodas: 4,
+//   init(valor) {
+//     this.marca = valor;
+//     return this;
+//   },
+//   acelerar() {
+//     return this.marca + " acelerou";
+//   },
+//   buzinar() {
+//     return this.marca + " buzinou";
+//   },
+// };
 
-const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
-// Remova o último carro, mas antes de remover
-// salve a array original em outra variável
-const bkpCarros = carros.slice()
-carros.pop()
-console.log(bkpCarros)
-console.log(carros)
+// const honda = Object.create(carro).init("Honda");
+// console.log(honda.acelerar());
+
+// const ferrari = Object.create(carro).init("Ferrari");
+// console.log(ferrari.acelerar());
+
+// const funcaoAutomovel = {
+//   acelerar() {
+//     return "acelerou";
+//   },
+//   buzinar() {
+//     return "buzinou";
+//   },
+// };
+// const moto = {
+//   rodas: 2,
+//   capacete: true,
+// };
+
+// Object.assign(moto, funcaoAutomovel, carro);
+
+// console.log(moto)
+
+// const moto = {
+// 	capacete: true,
+// };
+// console.log(moto);
+
+// Object.defineProperties(moto, {
+//   rodas: {
+//     value: 2,
+// 		configurable: false,
+// 		writable: true,
+//   },
+// });
+
+// moto.rodas = 5;
+// delete moto.rodas;
+// delete moto.capacete;
+// console.log(moto);
+
+const moto = {
+  capacete: true,
+};
+
+Object.defineProperties(moto, {
+  rodas: {
+    get() {
+      return this._rodas;
+    },
+    set(valor) {
+      this._rodas = valor * 4;
+    },
+  },
+});
+moto.rodas = 4;
+console.log(moto);
+console.log(moto.rodas);
