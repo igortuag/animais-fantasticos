@@ -5,18 +5,18 @@ export default function initTabNav() {
   if (tabMenu.length) {
     const activeTab = (index) => {
       tabContent.forEach((section) => {
-        section.classList.remove("ativo");
+        section.classList.remove('ativo');
       });
       const direcao = tabContent[index].dataset.anime;
-      tabContent[index].classList.add("ativo", direcao);
+      tabContent[index].classList.add('ativo', direcao);
     };
 
     tabMenu.forEach((itemMenu, index) => {
-      itemMenu.addEventListener("click", () => {
+      itemMenu.addEventListener('click', () => {
         activeTab(index);
       });
     });
 
     activeTab(0);
   }
-};
+}
