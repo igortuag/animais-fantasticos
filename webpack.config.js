@@ -7,6 +7,6 @@ module.exports = {
   output: {
     // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main2.js',
+    filename: 'main.js',
   },
 };
