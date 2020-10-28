@@ -2,6 +2,8 @@
 
 Exemplo de implementação feita com base no curso de JavaScript completo da Origamid
 
+[Demonstração](https://igortuag.github.io/animais-fantasticos/)
+
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
