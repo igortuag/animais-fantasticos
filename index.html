@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animais Fantásticos</title>
     <script>
-      document.documentElement.className += " js";
+      document.documentElement.className += ' js';
     </script>
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -296,10 +296,30 @@
         </dl>
       </section>
 
+      <section class="grid-section galeria" data-anime="scroll">
+        <ul class="custom-controls">
+          <li><img src="img/slide/foto1-thumb.jpg" alt="" /></li>
+          <li><img src="img/slide/foto2-thumb.jpg" alt="" /></li>
+          <li><img src="img/slide/foto3-thumb.jpg" alt="" /></li>
+          <li><img src="img/slide/foto4-thumb.jpg" alt="" /></li>
+          <li><img src="img/slide/foto5-thumb.jpg" alt="" /></li>
+          <li><img src="img/slide/foto6-thumb.jpg" alt="" /></li>
+        </ul>
+        <div class="slide-wrapper">
+          <ul class="slide">
+            <li><img src="img/slide/foto1.jpg" alt="" /></li>
+            <li><img src="img/slide/foto2.jpg" alt="" /></li>
+            <li><img src="img/slide/foto3.jpg" alt="" /></li>
+            <li><img src="img/slide/foto4.jpg" alt="" /></li>
+            <li><img src="img/slide/foto5.jpg" alt="" /></li>
+            <li><img src="img/slide/foto6.jpg" alt="" /></li>
+          </ul>
+        </div>
+      </section>
+
       <section class="grid-section numeros" data-anime="scroll">
         <h1 class="titulo">Número</h1>
-        <div class="numeros-grid">
-        </div>
+        <div class="numeros-grid"></div>
       </section>
 
       <section class="grid-section contato" data-anime="scroll" id="contato">
@@ -316,7 +336,9 @@
           <li>+55 (27) 9 9812-6774</li>
           <li>Rua do teste, nº 1</li>
           <li>Vila Velha / ES Brasil</li>
-          <li data-semana="1,2,3,4,5" data-horario="8,18">Seg à Sex das 8 às 18</li>
+          <li data-semana="1,2,3,4,5" data-horario="8,18">
+            Seg à Sex das 8 às 18
+          </li>
           <li>Doe <span class="btc-preco">0</span> bitcoin para nos ajudar.</li>
         </ul>
       </section>
