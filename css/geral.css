@@ -226,7 +226,7 @@ html.textomaior {
   }
 
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .menu {
@@ -285,13 +285,18 @@ html.textomaior {
 }
 
 [data-anime='accordion'] dt::after {
-  content: '⬎';
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('../img/arrow-red.svg') center center no-repeat;
+  transform: rotate(90deg);
   margin-left: 10px;
+  transition: transform 0.3s;
 }
 
 [data-anime='accordion'] dt.ativo::after {
-  content: '⬏';
-  margin-left: 10px;
+  transform: rotate(-90deg);
 }
 
 [data-anime='accordion'] dd.ativo {
@@ -341,4 +346,11 @@ html.textomaior {
   padding: .2rem .5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrow-black {
+  background: url('../img/arrow-black.svg') center center no-repeat;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
